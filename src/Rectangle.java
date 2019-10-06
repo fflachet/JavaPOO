@@ -1,24 +1,28 @@
 
 public class Rectangle {
 	
-	private Point point;
+	private Point pbg;
+	private Point pbd;
+	private Point phg;
+	private Point phd;
 	private int x,y;
 	
 	
 	
-	public Rectangle(Point point, int x, int y) {
+	
+	public Rectangle(Point pbg, int x, int y) {
 		super();
-		this.point = point;
+		this.pbg = pbg;
 		this.x = x;
 		this.y = y;
 	}
 	
 	public Point getPoint() {
-		return point;
+		return pbg;
 	}
 
-	public void setPoint(Point point) {
-		this.point = point;
+	public void setPoint(Point pbg) {
+		this.pbg = pbg;
 	}
 
 	public int getX() {
@@ -38,16 +42,16 @@ public class Rectangle {
 	}
 
 	public Point getPointBasGauche() {
-		return this.point;
+		return this.pbg;
 	}
 	public Point getPointBasDroite() {
-		return new Point(point.getX() + 5,point.getY() + 7);
+		return this.pbd(pbg.getX() + 10,pbg.getY());
 	}
 	public Point getPointHautGauche() {
-		return new Point(point.getX() + 8,point.getY() + 2);
+		return new Point(point.getX(),point.getY() + 7);
 	}
 	public Point getPointHautDroite() {
-		return new Point(point.getX() + 4,point.getY() + 6);
+		return new Point(point.getX() + 10,point.getY() + 7);
 	}
 	
 	@Override

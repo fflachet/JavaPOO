@@ -1,12 +1,14 @@
 
 public class Point {
 	
-	private int x;
-	private int y;
+	final private int INIT_X = 25;
+	final private int INIT_Y = 25;
+	int x,y;
+	
 	public Point(int x, int y) {
 		super();
-		this.x = x;
-		this.y = y;
+		this.x = INIT_X;
+		this.y = INIT_Y;
 	}
 	public int getX() {
 		return x;
