@@ -1,20 +1,19 @@
 
-public class Rectangle {
+public class Rectangle extends Figure implements Surfacable {
 	
 	private Point pbg;
 	private Point pbd;
 	private Point phg;
-	private Point phd;
+	private Point phd;	
 	private int x,y;
-	
-	
-	
+	double s;
 	
 	public Rectangle(Point pbg, int x, int y) {
 		super();
 		this.pbg = pbg;
-		this.x = x;
-		this.y = y;
+		this.pbd = new Point(pbg.getX() + x, pbg.getY());
+		this.phg = new Point(pbg.getX(), pbg.getY() + y);
+		this.phd = new Point(pbg.getX() + x, pbg.getY() + y);
 	}
 	
 	public Point getPoint() {
@@ -42,25 +41,55 @@ public class Rectangle {
 	}
 
 	public Point getPointBasGauche() {
-		return this.pbg;
+		return pbg;
 	}
 	public Point getPointBasDroite() {
-		return this.pbd(pbg.getX() + 10,pbg.getY());
+		return pbd;
 	}
 	public Point getPointHautGauche() {
-		return new Point(point.getX(),point.getY() + 7);
+		return phg;
 	}
 	public Point getPointHautDroite() {
-		return new Point(point.getX() + 10,point.getY() + 7);
+		return phd;
+	}
+
+	@Override
+	protected String getType() {
+		
+		return this.getClass().getSimpleName();
+	}
+
+	@Override
+	public String toString() {
+		return "[" + getType() + " " + pbg + pbd + phg + phd + "]surface : " + surface();
 	}
 	
 	@Override
-	public String toString() {
-		return "[RECT " + getPointBasGauche() + getPointBasDroite() + getPointHautDroite() + getPointHautGauche() + "]";
-	}
-	
 	public void affiche() {
 		System.out.println(toString());
+		
 	}
+
+	@Override
+	public double surface() {
+		double s = (pbd.getX() - pbg.getX()) * (phg.getY() - pbg.getY());
+		return s;
+	}
+	
+	@Override
+	protected Point[] getPoints() {
+		Point[] points;
+		
+		return null;
+	}
+	
+	
+
+	
+	
+
+	
+	
+	
 	
 }

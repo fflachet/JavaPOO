@@ -1,5 +1,9 @@
+/FigureUtil.class
 /Point.class
 /Rectangle.class
 /Rond.class
 /main.class
-/FigureUtil.class
+/Carre.class
+/Figure.class
+/Segment.class
+/Surfacable.class

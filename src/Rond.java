@@ -1,5 +1,5 @@
 
-public class Rond {
+public class Rond extends Figure implements Surfacable {
 	
 	private Point p;
 	private int r;
@@ -23,10 +23,29 @@ public class Rond {
 	}
 	@Override
 	public String toString() {
-		return "[ROND "+ p +" , "+ r +"]";
+		return "[" + getType() + p +" , "+ r +"]surface : " + surface();
 	}
 	
+	@Override
+	protected String getType() {
+		return this.getClass().getSimpleName();
+	}
+	
+	@Override
 	public void affiche() {
 		System.out.println(toString());
 	}
+	
+	@Override
+	public double surface() {
+		double aire = r * r * Math.PI; 
+		return aire;
+	}
+	
+	@Override
+	protected Point[] getPoints() {
+		
+		return null;
+	}
+	
 }
