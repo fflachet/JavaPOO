@@ -16,7 +16,15 @@ public class main {
 		
 		Figure.getRandomFigure();
 		SurfacableUtil.getRandomSurfacable();
-
+		
+		Figure[] figArray = new Figure[4];
+		
+		figArray[0] = FigureUtil.getRandomCarre();
+		figArray[1] = FigureUtil.getRandomRectangle();
+		figArray[2] = FigureUtil.getRandomRond();
+		figArray[3] = FigureUtil.getRandomSegment();
+		
+		FigureUtil.getPoints(figArray);
 	}
 
 }

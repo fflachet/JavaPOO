@@ -1,6 +1,7 @@
 package fr.diginamic.poo.figures.util;
 
 import fr.diginamic.poo.figures.figure.Carre;
+import fr.diginamic.poo.figures.figure.Figure;
 import fr.diginamic.poo.figures.figure.Point;
 import fr.diginamic.poo.figures.figure.Rectangle;
 import fr.diginamic.poo.figures.figure.Rond;
@@ -8,6 +9,7 @@ import fr.diginamic.poo.figures.figure.Segment;
 
 
 public class FigureUtil {
+	
 	
 	private FigureUtil() {
 		super();
@@ -49,9 +51,24 @@ public class FigureUtil {
 		return new Segment(pointOrigine, longueur, horizontal);
 	}
 
-	public Point[] getPoints() {
-		Point[] points = new Point[2];
+	public static Point[] getPoints(Figure[] figArray) {
+		
+		
+		
+		
+		
+		
+		
+//		for(int i = 0; i < figArray.length; i++) {
+//			if (i == figArray.length -1) {
+//				
+//				System.out.println();
+//			}
+//			
+//		}
+		
 
-		return points;
+		return null;
+		
 	}
 }
