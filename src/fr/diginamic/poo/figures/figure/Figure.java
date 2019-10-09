@@ -3,18 +3,17 @@ package fr.diginamic.poo.figures.figure;
 import fr.diginamic.poo.figures.util.FigureUtil;
 import fr.diginamic.poo.figures.util.RandomUtil;
 
-
 public abstract class Figure {
 
 	public abstract String toString();
-	
+
 	public static Figure getRandomFigure() {
 		switch (RandomUtil.getRandomInt(1, 4)) {
 		case 1:
 			return FigureUtil.getRandomCarre();
-		case 2: 
+		case 2:
 			return FigureUtil.getRandomRectangle();
-		case 3: 
+		case 3:
 			return FigureUtil.getRandomRond();
 		case 4:
 			return FigureUtil.getRandomSegment();
@@ -27,6 +26,6 @@ public abstract class Figure {
 		System.out.println(this);
 	}
 
-	protected abstract Point[] getPoints();
+	public abstract Point[] getPoints();
 
 }

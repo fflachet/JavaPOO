@@ -6,7 +6,6 @@ public class Point {
 	private final static int INIT_Y = 25;
 	private int x, y;
 
-
 	public Point() {
 		super();
 		this.x = INIT_X;

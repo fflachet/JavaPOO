@@ -25,11 +25,8 @@ public class Segment extends Figure {
 	}
 
 	@Override
-	protected Point[] getPoints() {
-		Point[] points = new Point[2];
-
-		points[0] = debut;
-		points[1] = fin;
+	public Point[] getPoints() {
+		Point[] points = { debut, fin };
 		return points;
 	}
 }

@@ -20,17 +20,14 @@ public class Rond extends Figure implements Surfacable {
 		return this.getClass().getSimpleName();
 	}
 
-
-
 	@Override
 	public double surface() {
 		return r * r * Math.PI;
 	}
 
 	@Override
-	protected Point[] getPoints() {
-		Point[] points = new Point[1];
-		points[0] = p;
+	public Point[] getPoints() {
+		Point[] points = { p };
 
 		return points;
 	}

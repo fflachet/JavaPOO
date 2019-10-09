@@ -14,7 +14,7 @@ public class Rectangle extends Figure implements Surfacable {
 		this.pbd = new Point(pbg.getX() + x, pbg.getY());
 		this.phg = new Point(pbg.getX(), pbg.getY() + y);
 		this.phd = new Point(pbg.getX() + x, pbg.getY() + y);
-		
+
 		this.x = x;
 		this.y = y;
 	}
@@ -50,16 +50,7 @@ public class Rectangle extends Figure implements Surfacable {
 
 	@Override
 	public Point[] getPoints() {
-
-		Point[] points = new Point[4];
-
-		points[0] = pbg;
-		points[1] = pbd;
-		points[2] = phg;
-		points[3] = phd;
-		for (int i = 0; i < points.length; i++) {
-			System.out.println(points[i]);
-		}
+		Point[] points = { pbg, pbd, phd, phg };
 		return points;
 	}
 
